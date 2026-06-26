@@ -1,0 +1,16 @@
+{
+  "name": "@community-hero/officer-web",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@community-hero/ui": "*",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1"
+  }
+}

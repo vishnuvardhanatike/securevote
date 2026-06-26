@@ -1,0 +1,6 @@
+{
+  "name": "Community Hero",
+  "description": "A community-focused civic platform for reporting and managing municipal incidents with Gemini-assisted triaging.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,42 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile database record containing security role and basic metadata.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "description": "The unique Firebase Auth user ID."
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "The registered email address."
+        },
+        "role": {
+          "type": "string",
+          "enum": ["citizen", "officer", "admin"],
+          "description": "The authorized user role."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Iso timestamp of account creation."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Iso timestamp of last account update."
+        }
+      },
+      "required": ["uid", "email", "role", "createdAt", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{uid}": {
+      "schema": "User",
+      "description": "A collection of user profile records keyed by their unique authentication ID."
+    }
+  }
+}
